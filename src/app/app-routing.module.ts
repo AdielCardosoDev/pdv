@@ -4,12 +4,28 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'folder',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
+    path: 'folder',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'usuarios',
+    loadChildren: () => import('./usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+  },
+  {
+    path: 'add-usuario',
+    loadChildren: () => import('./add-usuario/add-usuario.module').then( m => m.AddUsuarioPageModule)
+  },
+  {
+    path: 'mostrar-usuarios',
+    loadChildren: () => import('./mostrar-usuarios/mostrar-usuarios.module').then( m => m.MostrarUsuariosPageModule)
+  },
+  {
+    path: 'mostrar-usuarios/:id/:nome/:cpf/:email/:senha/:nivel',
+    loadChildren: () => import('./mostrar-usuarios/mostrar-usuarios.module').then( m => m.MostrarUsuariosPageModule)
   }
 ];
 

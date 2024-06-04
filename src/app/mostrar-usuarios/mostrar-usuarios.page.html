@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" (click)="usuarios()">
+      <ion-icon name="arrow-back"> </ion-icon>
+    </ion-buttons>
+    <ion-title>Dados do Usuário - {{nome}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card class="cinza-claro">
+    <ion-card-header>
+      
+      <ion-card-title>
+        {{nome}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Email: {{email}} <br>
+      
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
+  
