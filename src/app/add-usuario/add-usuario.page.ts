@@ -16,6 +16,9 @@ export class AddUsuarioPage implements OnInit {
   senha: string = '';
   nivel: string = '';
 
+  antigo: string = '';
+  antigo2: string = '';
+
   constructor(
     private router: Router,
     private provider: Api,
@@ -25,7 +28,15 @@ export class AddUsuarioPage implements OnInit {
 
   ngOnInit() {
    this.actRouter.params.subscribe((data: any) => {
-    
+    this.id = data.id;
+    this.nome = data.nome;
+    this.cpf = data.cpf;
+    this.email = data.email;
+    this.senha = data.senha;
+    this.nivel = data.nivel;
+
+    this.antigo = data.email;
+    this.antigo2 = data.cpf;
    });
   }
 
@@ -59,6 +70,9 @@ export class AddUsuarioPage implements OnInit {
         email: this.email,
         senha: this.senha,
         nivel: this.nivel,
+        id: this.id,
+        antigo: this.antigo,
+        antigo2: this.antigo2,
       }
       this.provider.dadosApi(dados, 'usuarios/inserir.php').subscribe(
         (data: any) => {
