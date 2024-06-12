@@ -1,13 +1,13 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-folder',
-  templateUrl: './folder.page.html',
-  styleUrls: ['./folder.page.scss'],
+  selector: 'app-painel-financeiro',
+  templateUrl: './painel-financeiro.page.html',
+  styleUrls: ['./painel-financeiro.page.scss'],
 })
-export class FolderPage implements OnInit {
-  a = '';
+export class PainelFinanceiroPage implements OnInit {
+a = '';
   constructor(
     private activatedRoute: ActivatedRoute,
     private router:Router, 
